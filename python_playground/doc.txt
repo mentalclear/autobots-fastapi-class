@@ -1,0 +1,21 @@
+to install venv run:
+python -m venv
+
+To activate venv run:
+.\venv\Scripts\activate
+
+Then Select Interpreter from command pallete:
+venv
+
+Install pytest 
+pip install pytest
+
+Installed requests
+pip install requests
+
+Execute Command pallete  and select: Python: Configure test
+and select pytest
+
+Challenge week 1:
+
+See file shared in slack
