@@ -4,6 +4,9 @@ python -m venv
 To activate venv run:
 .\venv\Scripts\activate
 
+In linux use to activate venv:
+source ./venv/bin/activate
+
 Then Select Interpreter from command pallete:
 venv
 
