@@ -9,7 +9,7 @@ def test_string_repeater_positive():
 def test_string_repeater_negative():
     character = "a"
     count = 5
-    assert string_repeater(character, count) != "aaaa"
+    assert string_repeater(character, count) != "aaaaaa"
 
 # Negative negative test for characters
 def test_strin_repeater_negative_character():
