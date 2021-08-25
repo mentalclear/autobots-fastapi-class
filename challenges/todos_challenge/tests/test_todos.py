@@ -10,15 +10,26 @@ TODOS_URL = 'https://df-flask-todo-api-class.herokuapp.com/todos'
 TODO_URL = 'https://df-flask-todo-api-class.herokuapp.com/todo'
 rand_num = random.randint(1, 50)
 
-def test_add_todos():    
+
+def test_add_todos_returns_statuscode_200():
     payload = {"done": False, "title": f"Post TEST {rand_num}"}
     result = create_new_todo(TODO_URL, payload)
 
     # Testing for Status code 200
     assert result[1] == 200
 
+
+def test_add_todos_incomplete_todo_set_false():
+    payload = {"done": False, "title": f"Post TEST {rand_num}"}
+    result = create_new_todo(TODO_URL, payload)
+
     # Testing for Done is set to False
     assert result[0]['done'] == False
+
+
+def test_add_todos_title_is_correct():
+    payload = {"done": False, "title": f"Post TEST {rand_num}"}
+    result = create_new_todo(TODO_URL, payload)    
 
     # Testing for the title to be "Post TEST {random number}"
     assert result[0]['title'] == f"Post TEST {rand_num}"
