@@ -14,5 +14,11 @@ app = FastAPI()
 def create_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     return crud.create_user(db, user)
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)    
+
+@app.post("/create-todo", response_model=schemas.ToDo)
+def create_todo(todo: schemas.ToDoCreate, db: Session = Depends(get_db)):
+    return crud.create_todo(db, todo)
+
+
+if __name__ == "__main__":  # pragma: nocover
+    uvicorn.run(app, host="0.0.0.0", port=8000)

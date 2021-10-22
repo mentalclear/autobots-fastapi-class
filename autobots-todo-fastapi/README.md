@@ -23,3 +23,15 @@ This repo is in conjunction with autobots.
  - title: str
  - done: Bool
  
+
+ ## Homework
+
+ - Get a user 
+ - Get a todo
+ - Update a todo done
+ - Delete a todo
+
+ ### To run code coverage: 
+`poetry run pytest --cov-report html:html_cov_report --cov=app tests/`
+`poetry run pytest --cov-report term --cov=app tests/`
+

@@ -20,3 +20,11 @@ def create_user(db: Session, user: schemas.UserCreate):
 
     db.refresh(db_user)
     return db_user
+
+
+def create_todo(db: Session, todo: schemas.ToDoCreate):
+    db_todo = models.ToDo(title=todo.title, done=todo.done)
+    db.add(db_todo)
+    db.commit()
+    db.refresh(db_todo)
+    return db_todo
